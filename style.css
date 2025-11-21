@@ -1,0 +1,214 @@
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-color: rgb(254, 255, 194); 
+    height: 100vh;}
+.box{
+    background-color: rgba(48, 31, 31, 0.945);
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    margin: .5em;}
+.erm{
+    background-color: rgba(255, 255, 255, 0.945);
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    margin: .5em;}
+.yay{
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    margin: .5em;}
+.eye1{
+    position: absolute;
+    background-color: rgb(253, 251, 251);
+    height: 68px;
+    width: 68px;
+    border: solid rgb(78, 33, 4) 2px;
+    left: 15%;
+    top: 25%;
+    border-radius: 50%;}
+.eye2{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    border: solid rgb(78, 33, 4) 2px;
+    height: 68px;
+    width: 68px;
+    left: 56%;
+    top: 25%;
+    border-radius: 50%;}
+.pupil{
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    height: 25px;
+    width: 25px;
+    left: 29%;
+    top: 29.5%;
+    border-radius: 50%;}
+.pupil2{
+     position: relative;
+    background-color: rgb(0, 0, 0);
+    height: 25px;
+    width: 25px;
+    left: 29%;
+    top: 29.5%;
+    border-radius: 50%;}
+.tounge{
+    position: absolute ;
+    background-color: #ff90c8;
+    height: 72px;
+    width: 65px;
+    left: 37%;
+    top: 65%;
+    border-radius: 44%;
+    transition: background-color 1s;
+}
+.tounge:hover{
+    background-color: rgb(126, 156, 255);
+}
+.mouth{
+    position: absolute;
+    background-color: rgb(77, 47, 12);
+    height: 130px;
+    width: 150px;
+    border-radius: 50%;
+    top: 33%;
+    left: 21%;}
+.over{
+    position: absolute;
+    background-color:#fffc60 ;
+    height: 80px;
+    width: 200px;
+    border-radius: 50%;
+    top: 32%;
+    left: 12%;}
+.emoji{
+    position: relative;
+    right: 30%;
+    left: 30%;
+    top: 3%;
+    height:250px;
+    width: 255px;
+    border-radius: 50%;
+    background-image: radial-gradient(
+        #fffc60 58%,
+        #ffdb11 80%);}
+.polygon{
+    width: 200px;
+    height: 150px;
+    background-color: #ffddaf;
+    clip-path: polygon(50% 0, 100% 160%, 0 160%);}
+.head{
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: 46.2%;
+    left: 86px;
+    background-color: #6d13ff;
+}
+.body{
+    position: fixed;
+    width: 14px;
+    height: 50px;
+    left:93px;
+    top: 48.4%;
+    background-color: #6d13ff;
+}
+
+.larm{
+    position: fixed;
+    width: 7px;
+    height: 30px;
+    background-color: #6d13ff;
+    rotate: 40deg;
+    top: 49.7%;
+    left: 8.7%;
+}
+
+.rarm{
+    position: absolute;
+    width: 7px;
+    height: 30px;
+    background-color: #6d13ff;
+    rotate: -40deg;
+    top: 49.7%;
+    left: 110px;
+}
+.lleg{
+    position: absolute;
+    width: 7px;
+    height: 35px;
+    left:10%;
+    top: 53%;
+    rotate: -30deg;
+    background-color: #6d13ff;
+    animation: movleg 1s infinite alternate-reverse;
+}
+.rleg{
+    position: absolute;
+    width: 7px;
+    height: 35px;
+    left:11.3%;
+    top: 53%;
+    rotate: -30deg;
+    background-color: #6d13ff;
+    animation: moveLeg 1s infinite alternate-reverse;
+}
+
+@keyframes moveLeg{
+    from{
+        transform: rotate(-10deg);
+    }
+    to{
+        transform: rotate(90deg);
+        transform-origin: top;
+    }
+}
+
+@keyframes movleg{
+    from{
+        transform: rotate(90deg);
+    }
+    to{
+        transform: rotate(-10deg);
+        transform-origin: top;
+    }
+}
+
+.carousel{
+    width: 100%;
+    display: flex;
+}
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+.group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: spin 4.5s infinite linear;
+}
+.card{
+    background: #ff90c8;
+    font-size: 1em;
+    text-align: center;
+    align-content: center;
+}
+@keyframes spin {
+    from{ translate: 0;}
+    to {translate: -100%;}
+}
+
+.image{
+    height: 258px;
+    width: auto;
+}
