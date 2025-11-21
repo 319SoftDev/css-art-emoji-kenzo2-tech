@@ -51,8 +51,11 @@
     height: 25px;
     width: 25px;
     left: 29%;
-    top: 29.5%;
-    border-radius: 50%;}
+    top: 29%;
+    border-radius: 50%;
+    animation: emoji 2s infinite alternate-reverse;
+}
+
 .pupil2{
      position: relative;
     background-color: rgb(0, 0, 0);
@@ -60,7 +63,25 @@
     width: 25px;
     left: 29%;
     top: 29.5%;
-    border-radius: 50%;}
+    border-radius: 50%;
+    animation: emoji 2s infinite alternate-reverse;
+}
+
+
+@keyframes emoji{
+    from{
+        width: 25px;
+        height: 25px;
+    }
+    to{
+        width: 66px;
+        height: 66px;
+        background-color: #77ff94;
+        top: -1px;
+        left: -1px;
+    }
+}
+
 .tounge{
     position: absolute ;
     background-color: #ff90c8;
@@ -127,27 +148,51 @@
 .larm{
     position: fixed;
     width: 7px;
-    height: 30px;
+    height: 36px;
     background-color: #6d13ff;
     rotate: 40deg;
     top: 49.7%;
-    left: 8.7%;
+    left: 97px;
+    animation: moveArm 1s infinite alternate-reverse;
 }
 
 .rarm{
     position: absolute;
     width: 7px;
-    height: 30px;
+    height: 36px;
     background-color: #6d13ff;
     rotate: -40deg;
     top: 49.7%;
-    left: 110px;
+    left: 92px;
+    animation: movearm 1s infinite alternate-reverse;
 }
+
+@keyframes moveArm{
+    from{
+        transform: rotate(10deg);
+    }
+    to{
+        transform: rotate(-90deg);
+        transform-origin: top;
+    }
+}
+
+@keyframes movearm{
+    from{
+        transform: rotate(-10deg);
+    }
+    to{
+        transform: rotate(90deg);
+        transform-origin: top;
+    }
+}
+
+
 .lleg{
     position: absolute;
     width: 7px;
     height: 35px;
-    left:10%;
+    left:95px;
     top: 53%;
     rotate: -30deg;
     background-color: #6d13ff;
@@ -157,7 +202,7 @@
     position: absolute;
     width: 7px;
     height: 35px;
-    left:11.3%;
+    left:95px;
     top: 53%;
     rotate: -30deg;
     background-color: #6d13ff;
@@ -173,7 +218,6 @@
         transform-origin: top;
     }
 }
-
 @keyframes movleg{
     from{
         transform: rotate(90deg);
@@ -183,7 +227,6 @@
         transform-origin: top;
     }
 }
-
 .carousel{
     width: 100%;
     display: flex;
